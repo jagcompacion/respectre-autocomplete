@@ -1,44 +1,54 @@
 # Autocomplete
 
+<!-- STORY -->
+
 ### Usage
 
 ```js
-import {
-  Autocomplete
-} from 'respectre/experimentals';
+import Autocomplete from 'respectre-autocomplete';
 ```
 
-### Properties
+### Select
 
-#### Autocomplete
-
-| propName  | propType | defaultValue | isRequired |
-| --------- | -------- | ------------ | ---------- |
-| className | string   | -            | -          |
-| size      | string   | -            | -          |
+| propName | propType | defaultValue | isRequired |
+| -------- | -------- | ------------ | ---------- |
+| list     | array    | []           | -          |
+| onSelected | func   | -            | -          |
+| onChange | func     | -            | -          |
+| placeholder | string | -           | -          |
+| name     | string   | -            | yes        |
+| loading  | boolean  | false        | -          |
 
 ### Roadmap
 
 #### Default
 
 ```js
-import { Loading } from 'respectre/components';
+import Autocomplete from 'respectre-autocomplete';
+
+const list = [
+  {
+    id: 1,
+    src: 'https://picturepan2.github.io/spectre/img/avatar-4.png',
+    label: 'Steve Roger',
+    value: 'test',
+  },
+  {
+    id: 2,
+    src: 'https://picturepan2.github.io/spectre/img/avatar-4.png',
+    label: 'Captain America',
+    value: 'test2',
+  },
+];
 
 render() {
   return (
-    <Loading />
-  );
-}
-```
-
-#### large
-
-```js
-import { Loading } from 'respectre/components';
-
-render() {
-  return (
-    <Loading size="lg" />
+    <Autocomplete
+      list={list}
+      onSelected={e => console.log(e)}
+      placeholder="Type name of the user"
+      name="users"
+    />
   );
 }
 ```

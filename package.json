@@ -1,5 +1,5 @@
 {
-  "name": "respectre",
+  "name": "respectre-autocomplete",
   "version": "0.0.5",
   "description": "React components using spectre.css",
   "main": "",
@@ -14,12 +14,13 @@
   },
   "author": "jagcompacion@gmail.com",
   "license": "ISC",
-  "repository": "https://github.com/jagcompacion/respectre",
+  "repository": "https://github.com/jagcompacion/respectre-autocomplete",
   "dependencies": {
     "classnames": "^2.2.6",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "respectre": "0.0.5",
     "spectre.css": "^0.5.3"
   },
   "devDependencies": {
